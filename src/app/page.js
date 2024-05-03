@@ -14,7 +14,7 @@ export default function Booking() {
       <div>
         {carsListing.map((item, index) => (
           <div key={index}>
-            <div>{item.car.name}</div>
+            <div class="mt-4">{item.car.name}</div>
             <div>{item.car.price}</div>
 
             <div class="grid gap-2 grid-cols-3 grid-rows-1">

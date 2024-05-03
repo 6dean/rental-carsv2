@@ -1,14 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import Listing from "./objects/listing";
 
-const listPhotos = {
-  car: {
-    name: "ASTON MARTIN V12 SPEEDSTER",
-    img1: "https://res.cloudinary.com/dlfp2xvis/image/upload/fl_preserve_transparency/v1714660882/rentals/ASTON%20MARTIN%20V12%20SPEEDSTER/1_bouqgh.jpg",
-    img2: "https://res.cloudinary.com/dlfp2xvis/image/upload/fl_preserve_transparency/v1714660882/rentals/ASTON%20MARTIN%20V12%20SPEEDSTER/2_i0sq35.jpg",
-    img3: "https://res.cloudinary.com/dlfp2xvis/image/upload/v1714660882/rentals/ASTON%20MARTIN%20V12%20SPEEDSTER/3_dbgcz4.jpg",
-  },
-};
+const carsListing = Listing();
 
 export default function Booking() {
   return (
@@ -17,7 +11,22 @@ export default function Booking() {
       <div>
         <Link href="/reservation">ici tu reserves</Link>
       </div>
-      <Image src={listPhotos.car.img2} height={220} width={300} alt="" />
+      <div>
+        {carsListing.map((item, index) => (
+          <div key={index}>
+            <div>{item.car.name}</div>
+            <div>{item.car.price}</div>
+
+            <div class="grid gap-2 grid-cols-3 grid-rows-1">
+              {item.car.images.map((image, imageIndex) => (
+                <div key={imageIndex}>
+                  <img src={image.img} alt={`Image ${index}-${imageIndex}`} />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </main>
   );
 }

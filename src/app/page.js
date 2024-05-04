@@ -10,7 +10,7 @@ export default function Booking() {
       PAGE HOME
       <div>
         {carsListing.map((item, index) => (
-          <div class="card" key={index}>
+          <div class="card p-2" key={index}>
             <div>
               <div class="flex justify-between items-center mt-4">
                 <div>
@@ -33,7 +33,11 @@ export default function Booking() {
             <div class="grid gap-2 grid-cols-3 grid-rows-1">
               {item.car.images.map((image, imageIndex) => (
                 <div key={imageIndex}>
-                  <img src={image.img} alt={`Image ${index}-${imageIndex}`} />
+                  <img
+                    src={image.img}
+                    alt={`Image ${index}-${imageIndex}`}
+                    class="rounded-lg"
+                  />
                 </div>
               ))}
             </div>

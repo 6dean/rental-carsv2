@@ -11,20 +11,21 @@ export default function Booking() {
       <div>
         {carsListing.map((item, index) => (
           <div class="card" key={index}>
-            <div class="mt-4">{item.car.name}</div>
+            <div>
+              <div class="flex justify-between items-center mt-4">
+                <div>{item.car.name}</div>
+                <div class="flex flex-col">
+                  <div>{item.car.price}</div>
+                  <div>RENT ME</div>
+                </div>
+              </div>
+            </div>
             <div class="grid gap-2 grid-cols-3 grid-rows-1">
               {item.car.images.map((image, imageIndex) => (
                 <div key={imageIndex}>
                   <img src={image.img} alt={`Image ${index}-${imageIndex}`} />
                 </div>
               ))}
-            </div>
-
-            <div class="flex justify-end mt-4">
-              <div class="flex flex-col">
-                <div>{item.car.price}</div>
-                <div>RENT ME</div>
-              </div>
             </div>
           </div>
         ))}

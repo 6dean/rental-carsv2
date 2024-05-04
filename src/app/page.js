@@ -12,7 +12,7 @@ export default function Booking() {
         {carsListing.map((item, index) => (
           <div class="card p-2" key={index}>
             <div>
-              <div class="flex justify-between items-center mt-4">
+              <div class="flex justify-between items-center">
                 <div>
                   <div>{item.car.name}</div>
                 </div>
@@ -20,13 +20,13 @@ export default function Booking() {
                   <div>{item.car.price}</div>
                 </div>
               </div>
-              <div class="flex justify-between items-center mt-2">
+              <div class="flex justify-between items-center mt-2 mb-2">
                 <div>
                   <div>Chevaux : {item.car.hp}</div>
                   <div>Année : {item.car.year}</div>
                 </div>
                 <div>
-                  <div>RENT ME</div>
+                  <Link href="/reservation">RENT ME</Link>
                 </div>
               </div>
             </div>

@@ -5,6 +5,7 @@ export default function Booking() {
     <main>
       <div>
         <Link href="/">ici tu reserves</Link>
+        <div></div>
       </div>
     </main>
   );

@@ -15,11 +15,17 @@ export default function Booking() {
               <div class="flex justify-between items-center mt-4">
                 <div>
                   <div>{item.car.name}</div>
-                  <div>{item.car.hp}</div>
-                  <div>{item.car.year}</div>
                 </div>
                 <div class="flex flex-col">
                   <div>{item.car.price}</div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-2">
+                <div>
+                  <div>Chevaux : {item.car.hp}</div>
+                  <div>Année : {item.car.year}</div>
+                </div>
+                <div>
                   <div>RENT ME</div>
                 </div>
               </div>

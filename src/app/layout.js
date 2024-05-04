@@ -1,4 +1,6 @@
 import "./globals.css";
+import "./style.css";
+import Header from "./components/header";
 
 export const metadata = {
   title: "Next.js",

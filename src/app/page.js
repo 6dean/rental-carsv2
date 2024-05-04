@@ -9,20 +9,22 @@ export default function Booking() {
     <main>
       PAGE HOME
       <div>
-        <Link href="/reservation">ici tu reserves</Link>
-      </div>
-      <div>
         {carsListing.map((item, index) => (
-          <div key={index}>
+          <div class="card" key={index}>
             <div class="mt-4">{item.car.name}</div>
-            <div>{item.car.price}</div>
-
             <div class="grid gap-2 grid-cols-3 grid-rows-1">
               {item.car.images.map((image, imageIndex) => (
                 <div key={imageIndex}>
                   <img src={image.img} alt={`Image ${index}-${imageIndex}`} />
                 </div>
               ))}
+            </div>
+
+            <div class="flex justify-end mt-4">
+              <div class="flex flex-col">
+                <div>{item.car.price}</div>
+                <div>RENT ME</div>
+              </div>
             </div>
           </div>
         ))}

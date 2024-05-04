@@ -3,6 +3,7 @@ export default function Listing() {
     {
       car: {
         name: "ASTON MARTIN V12 SPEEDSTER",
+        denomination: "astonmartinv12speedster",
         description:
           "La V12 Speedster est une supercar d'exception, offrant une expérience de conduite ultime avec son design emblématique et sa puissance impressionnante.",
         price: "2600",
@@ -24,6 +25,7 @@ export default function Listing() {
     {
       car: {
         name: "DONKERVOORT D8 GTO PREMIUM",
+        denomination: "donkervoortd8gtopremium",
         description:
           "La Donkervoort D8 GTO Premium incarne l'essence même de la performance pure, alliant légèreté, agilité et puissance brute dans une voiture de sport ultime.",
         price: "1700",
@@ -45,6 +47,7 @@ export default function Listing() {
     {
       car: {
         name: "FERRARI 599 SA APERTA",
+        denomination: "ferrari599saaperta",
         description:
           "La Ferrari 599 SA Aperta est une œuvre d'art automobile, alliant élégance intemporelle et performances de pointe dans une voiture de sport décapotable exclusive.",
         price: "2800",
@@ -66,6 +69,7 @@ export default function Listing() {
     {
       car: {
         name: "LAMBORGHINI EVO SPYDER LP640-4",
+        denomination: "lamborghinievospyderlp6404",
         description:
           "La Lamborghini Evo Spyder LP640-4 est une démonstration de la perfection mécanique et esthétique, offrant une conduite exaltante et un design audacieux qui repousse les limites de l'ingénierie automobile.",
         price: "2000",
@@ -87,6 +91,7 @@ export default function Listing() {
     {
       car: {
         name: "ROLLS ROYCE WRAITH V12",
+        denomination: "rollsroycewraithv12",
         description:
           "La Rolls Royce Wraith V12 offre un luxe inégalé et une puissance élégante.",
         price: "1300",

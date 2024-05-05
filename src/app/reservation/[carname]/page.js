@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
 import Listing from "@/app/objects/listing";
 
 const carsListing = Listing();
@@ -9,10 +8,14 @@ const carsListing = Listing();
 export default function Booking({ params }) {
   const router = useRouter();
 
+  let carId;
   let foundCarName;
+
   for (let i = 0; i < carsListing.length; i++) {
     if (carsListing[i].car.denomination === params.carname) {
+      const foundcarId = carsListing[i].car;
       foundCarName = true;
+      carId = foundcarId;
     }
   }
 
@@ -21,7 +24,7 @@ export default function Booking({ params }) {
       <main>
         <div>
           <Link href="/">ici tu reserves</Link>
-          <div></div>
+          <div>Vous souhaitez louer la voiture suivante : {carId.name}</div>
         </div>
       </main>
     );

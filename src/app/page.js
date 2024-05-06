@@ -10,11 +10,8 @@ const carsListing = Listing();
 export default function Booking() {
   const params = useParams();
 
-  console.log(params);
-
   return (
     <main>
-      PAGE HOME
       <div>
         {carsListing.map((item, index) => (
           <div className="card p-2" key={index}>

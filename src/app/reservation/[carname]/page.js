@@ -21,14 +21,32 @@ export default function Booking({ params }) {
 
   if (foundCarName) {
     return (
-      <main>
+      <main className="flex justify-center">
         <div>
-          <Link href="/">ici tu reserves</Link>
-          <div>Vous souhaitez louer la voiture suivante : {carId.name}</div>
+          <div>
+            <div>Vous souhaitez louer la voiture suivante : {carId.name}</div>
+            <div>Puissance : {carId.hp} Chevaux</div>
+            <div>Prix : {carId.price} €</div>
+            <img src={carId.images[0].img} alt="img-car" width={500} />
+          </div>
+          <div className="mt-4">
+            <div>
+              <div>NOM</div>
+              <input type="text" />
+            </div>
+            <div>
+              <div>PRÉNOM</div>
+              <input type="text" />
+            </div>
+            <div>
+              <div>SUJET</div>
+              <input type="text" />
+            </div>
+          </div>
         </div>
       </main>
     );
   } else {
-    return router.push("/404");
+    return router.push("/");
   }
 }

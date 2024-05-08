@@ -18,14 +18,14 @@ export default function Booking() {
             <div>
               <div className="flex justify-between items-center">
                 <div>
-                  <div>{item.car.name}</div>
+                  <div className="style-car">{item.car.name}</div>
                 </div>
                 <div className="flex flex-col">
-                  <div>{item.car.price} €</div>
+                  <div className="style-price">{item.car.price} €</div>
                 </div>
               </div>
               <div className="flex justify-between items-center mt-2 mb-2">
-                <div>
+                <div className="style-detail">
                   <div>Chevaux : {item.car.hp}</div>
                   <div>Année : {item.car.year}</div>
                 </div>

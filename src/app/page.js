@@ -21,7 +21,7 @@ export default function Booking() {
                   <div>{item.car.name}</div>
                 </div>
                 <div className="flex flex-col">
-                  <div>{item.car.price}</div>
+                  <div>{item.car.price} €</div>
                 </div>
               </div>
               <div className="flex justify-between items-center mt-2 mb-2">
@@ -30,9 +30,11 @@ export default function Booking() {
                   <div>Année : {item.car.year}</div>
                 </div>
                 <div>
-                  <Link href={`/reservation/${item.car.denomination}`}>
-                    RENT ME
-                  </Link>
+                  <div className="button">
+                    <Link href={`/reservation/${item.car.denomination}`}>
+                      RENT ME
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

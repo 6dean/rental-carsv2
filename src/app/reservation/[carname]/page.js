@@ -57,12 +57,10 @@ export default function Booking({ params }) {
             </div>
             <div>
               <div>SUJET</div>
-              <input
+              <textarea
                 className="input-sujet"
-                type="text"
-                height={100}
                 placeholder="Bonjour, je souhaite avoir des informations..."
-              />
+              ></textarea>
             </div>
           </div>
         </div>
